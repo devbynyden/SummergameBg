@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steamgame BG
 // @namespace    https://github.com/ltapache/SummergameBg
-// @version      0.2.3
+// @version      0.2.4
 // @description  Steam Monster Minigame Background
 // @author       ltapache
 // @match        *://steamcommunity.com/minigame/towerattack*
@@ -12,14 +12,19 @@
 // @grant        none
 // ==/UserScript==
 (function( nw ) {
+	
+	//SETTINGS
+	var interfaceBgUrl = "http://i.imgur.com/xEVZ3nn.png";
+	var optionsBgUrl = "http://i.imgur.com/QFxudNP.jpg";
+	var infoBgUrl = "http://i.imgur.com/QFxudNP.jpg";
+	var steamBgUrl = "http://i.imgur.com/riHzvTu.jpg";
 
-	var bgUrl = "http://i.imgur.com/xEVZ3nn.png";
 
-
+	//PROGRAM
     setTimeout(function(){
 		//Background change interface
         console.log("BG By LtApache");
-        nw.$J(".tv_ui").css("background-image", "url("+bgUrl+")");
+        nw.$J(".tv_ui").css("background-image", "url("+interfaceBgUrl+")");
 		
 		
 		//Background change of options and info box
@@ -31,10 +36,10 @@
 		if(!info) {
 			info = document.querySelector(".info_box");
 		}			
-		options_box2.style.backgroundImage = "url(\"http://i.imgur.com/QFxudNP.jpg\")";
+		options_box2.style.backgroundImage = "url(\""+optionsBgUrl+"\")";
 		options_box2.style.backgroundRepeat  = "repeat";
 		//options_box2.style.color = "red";
-		info.style.backgroundImage = "url(\"http://i.imgur.com/QFxudNP.jpg\")";
+		info.style.backgroundImage = "url(\""+infoBgUrl+"\")";
 		info.style.backgroundRepeat  = "repeat";
 		
 		
@@ -43,7 +48,7 @@
 		if(!bgHead) {
 			bgHead = document.querySelector(".flat_page.game");
 		}	
-		bgHead.style.backgroundImage = "url(\"http://i.imgur.com/riHzvTu.jpg\")";
+		bgHead.style.backgroundImage = "url(\""+steamBgUrl+"\")";
 		bgHead.style.backgroundRepeat  = "repeat";
 		
     }, 10000);
