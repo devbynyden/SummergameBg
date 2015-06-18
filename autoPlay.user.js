@@ -32,7 +32,7 @@
 			bgHead = document.querySelector(".flat_page.game");
 		}	
 		bgHead.style.backgroundImage = "url(\"http://i.imgur.com/riHzvTu.jpg\")";
-		bgHead.style.backgroundRepeat  = "repeat-y";
+		bgHead.style.backgroundRepeat  = "repeat";
 		
     }, 10000);
 
