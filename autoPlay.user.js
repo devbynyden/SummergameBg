@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Steamgame BG
-// @namespace    http://bynyden.com/
+// @namespace    https://github.com/ltapache/SummergameBg
 // @version      0.1.5
 // @description  Steam Monster Minigame Background
 // @author       ltapache
