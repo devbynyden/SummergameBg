@@ -28,6 +28,6 @@
 		options_box2.style.backgroundRepeat  = "repeat";
 		//options_box.style.color = "white";
 		
-    }, 8000);
+    }, 10000);
 
 }(window));
