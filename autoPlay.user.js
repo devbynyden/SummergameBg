@@ -11,14 +11,15 @@
 // @downloadURL https://raw.githubusercontent.com/ltapache/SummergameBg/master/autoPlay.user.js
 // @grant        none
 // ==/UserScript==
-(function(nw) {
+"use strict";
+(function( nw ) {
 
-	var bgUrl='http://i.imgur.com/xEVZ3nn.png';
+	var bgUrl = "http://i.imgur.com/xEVZ3nn.png";
 
 
     setTimeout(function(){
         console.log("BG By LtApache");
-        nw.$J('.tv_ui').css('background-image', 'url('+bgUrl+')');
+        nw.$J(".tv_ui").css("background-image", "url("+bgUrl+")");
     }, 10000);
 
 }(window));
