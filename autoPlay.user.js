@@ -11,7 +11,6 @@
 // @downloadURL https://raw.githubusercontent.com/ltapache/SummergameBg/master/autoPlay.user.js
 // @grant        none
 // ==/UserScript==
-"use strict";
 (function( nw ) {
 
 	var bgUrl = "http://i.imgur.com/xEVZ3nn.png";
@@ -26,7 +25,7 @@
 			options_box = document.querySelector(".options_box");
 		}		
 		options_box.style.background-image = "url('http://i.imgur.com/QFxudNP.jpg'))";
-		options_box.style.background-repeat  = "repeat";
+		//options_box.style.background-repeat  = "repeat";
 		//options_box.style.color = "white";
 		
     }, 8000);
