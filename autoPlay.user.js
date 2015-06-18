@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steamgame BG
 // @namespace    https://github.com/ltapache/SummergameBg
-// @version      0.2.4
+// @version      0.2.5.1
 // @description  Steam Monster Minigame Background
 // @author       ltapache
 // @match        *://steamcommunity.com/minigame/towerattack*
@@ -18,6 +18,7 @@
 	var optionsBgUrl = "http://i.imgur.com/QFxudNP.jpg";
 	var infoBgUrl = "http://i.imgur.com/QFxudNP.jpg";
 	var steamBgUrl = "http://i.imgur.com/riHzvTu.jpg";
+	var timeOut = 10000; // Necessary to overwrite 
 
 
 	//PROGRAM
@@ -51,6 +52,14 @@
 		bgHead.style.backgroundImage = "url(\""+steamBgUrl+"\")";
 		bgHead.style.backgroundRepeat  = "repeat";
 		
-    }, 10000);
+		
+		//Add option to select menu
+		var selectMenu = document.getElementsByName("praiseGoldHelmImage");
+		var optionHtml = document.createElement("option");
+		optionHtml.value = interfaceBgUrl;
+		optionHtml.text = "Custom BG";
+		selectMenu[0].add(optionHtml,0);
+		
+    }, timeOut);
 
 }(window));
