@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steamgame BG
 // @namespace    http://bynyden.com/
-// @version      0.1.4
+// @version      0.1.5
 // @description  Steam Monster Minigame Background
 // @author       ltapache
 // @match        *://steamcommunity.com/minigame/towerattack*
@@ -20,6 +20,15 @@
     setTimeout(function(){
         console.log("BG By LtApache");
         nw.$J(".tv_ui").css("background-image", "url("+bgUrl+")");
-    }, 10000);
+		var options_box = document.querySelector(".options_box");
+
+		if(!options_box) {
+			options_box = document.querySelector(".options_box");
+		}		
+		options_box.style.background-image = "url('http://i.imgur.com/QFxudNP.jpg'))";
+		options_box.style.background-repeat  = "repeat";
+		//options_box.style.color = "white";
+		
+    }, 8000);
 
 }(window));
