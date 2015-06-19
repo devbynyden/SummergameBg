@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steamgame BG
 // @namespace    https://github.com/ltapache/SummergameBg
-// @version      0.2.5.1
+// @version      0.2.5.2
 // @description  Steam Monster Minigame Background
 // @author       ltapache
 // @match        *://steamcommunity.com/minigame/towerattack*
@@ -45,9 +45,9 @@
 		
 		
 		//Steam Background page change
-		var bgHead = document.querySelector(".flat_page.game");
+		var bgHead = document.querySelector(".auction_home_page");
 		if(!bgHead) {
-			bgHead = document.querySelector(".flat_page.game");
+			bgHead = document.querySelector(".auction_home_page");
 		}	
 		bgHead.style.backgroundImage = "url(\""+steamBgUrl+"\")";
 		bgHead.style.backgroundRepeat  = "repeat";
